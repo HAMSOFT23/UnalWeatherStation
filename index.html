@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andina SMC Weather Station</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <header class="main-header">
+            <h1 class="app-title">Weather Station</h1>
+            <p class="status-indicator">Status: <span class="status-live">Live</span></p>
+            <p class="status-indicator">Location: Campus La Nubia</span></p>
+
+        </header>
+
+        <main class="dashboard-grid">
+            
+            <article class="sensor-card wind-card">
+                <div class="card-header">
+                    <h2>Wind Speed</h2>
+                    <span class="icon">💨</span>
+                </div>
+                <div class="card-body">
+                    <span class="reading-value" id="wind-speed">0</span>
+                    <span class="reading-unit">km/h</span>
+                </div>
+            </article>
+
+            <!--
+            <article class="sensor-card rain-card">
+                <div class="card-header">
+                    <h2>Rain Status</h2>
+                    <span class="icon">💧</span>
+                </div>
+                <div class="card-body">
+                    <span class="reading-text" id="rain-status">Dry</span>
+                </div>
+                <div class="card-footer">
+                    <p>Last detected: <span id="last-rain-time">N/A</span></p>
+                </div>
+            </article>
+            -->
+
+        </main>
+
+        <footer class="main-footer">
+            <p>Powered by Raspberry Pi Zero 2W</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

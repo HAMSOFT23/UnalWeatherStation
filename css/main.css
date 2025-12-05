@@ -1,0 +1,153 @@
+:root {
+    /* Color Palette */
+    --bg-color: #f0f2f5;
+    --card-bg: #ffffff;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --accent-color: #3498db; /* Blue for weather */
+    --success-color: #2ecc71;
+    
+    /* Spacing & Borders */
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --border-radius: 12px;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Reset & Base Styles */
+* 
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centers the app on large screens */
+
+}
+
+/* App Container */
+.app-container {
+    width: 100%;
+    max-width: 600px; /* Limits width on desktop */
+    margin: var(--spacing-md);
+    background-color: transparent;
+}
+
+/* Header Styles */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-sm) 0;
+}
+
+.app-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.status-indicator {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.status-live {
+    color: var(--success-color);
+    font-weight: bold;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: var(--success-color);
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+/* Dashboard Grid Layout */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+}
+
+/* Sensor Card Component */
+.sensor-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease;
+}
+
+.sensor-card:hover {
+    transform: translateY(-2px); /* Subtle hover effect */
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.card-header h2 {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+.card-header .icon {
+    font-size: 1.5rem;
+}
+
+.card-body {
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.reading-value {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.reading-unit {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    vertical-align: super;
+}
+
+.reading-text {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.card-footer {
+    border-top: 1px solid #eee;
+    padding-top: var(--spacing-sm);
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+/* Footer */
+.main-footer {
+    text-align: center;
+    margin-top: var(--spacing-lg);
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
